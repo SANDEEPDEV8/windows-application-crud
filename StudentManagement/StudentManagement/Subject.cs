@@ -15,7 +15,7 @@ namespace StudentManagement
     public partial class Subject
     {
         public int SubjectID { get; set; }
-        public string SubjectName { get; set; }
+        public string Title { get; set; }
         public string SubjectCode { get; set; }
         public string SubjectType { get; set; }
         public int Credit { get; set; }

@@ -46,7 +46,7 @@
           <Property Name="StudentID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="StudentEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SongEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Logins" EntityType="Self.Login" />
           <EntitySet Name="StudentSubjects" EntityType="StudentModel.StudentSubject" />
           <EntitySet Name="Subjects" EntityType="StudentModel.Subject" />
@@ -64,7 +64,7 @@
             <PropertyRef Name="SubjectID" />
           </Key>
           <Property Name="SubjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SubjectName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SubjectCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="SubjectType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Credit" Type="Int32" Nullable="false" />
@@ -74,7 +74,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="StudentModelStoreContainer" CdmEntityContainer="StudentEntities1">
+        <EntityContainerMapping StorageEntityContainer="StudentModelStoreContainer" CdmEntityContainer="SongEntities1">
           <EntitySetMapping Name="Logins">
             <EntityTypeMapping TypeName="StudentModel.Login">
               <MappingFragment StoreEntitySet="Login">
@@ -98,7 +98,7 @@
                 <ScalarProperty Name="Credit" ColumnName="Credit" />
                 <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
                 <ScalarProperty Name="SubjectCode" ColumnName="SubjectCode" />
-                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="Title" ColumnName="SubjectName" />
                 <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
               </MappingFragment>
             </EntityTypeMapping>

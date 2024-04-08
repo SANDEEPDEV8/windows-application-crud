@@ -13,10 +13,10 @@ namespace StudentManagement
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StudentEntities1 : DbContext
+    public partial class SongEntities1 : DbContext
     {
-        public StudentEntities1()
-            : base("name=StudentEntities1")
+        public SongEntities1()
+            : base("name=SongEntities1")
         {
         }
     

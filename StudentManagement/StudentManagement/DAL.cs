@@ -16,7 +16,7 @@ namespace StudentManagement
             try
             {
 
-                using (StudentEntities1 db = new StudentEntities1())
+                using (SongEntities1 db = new SongEntities1())
                 {
                     int Status = (from student in db.Logins
                                   where student.StudentID == studentID &&
@@ -42,7 +42,7 @@ namespace StudentManagement
             try
             {
 
-                using (StudentEntities1 db = new StudentEntities1())
+                using (SongEntities1 db = new SongEntities1())
                 {
                     var Status = (from  s in db.StudentSubjects
                                   where s.StudentID == StudentID &&
@@ -76,7 +76,7 @@ namespace StudentManagement
             try
             {
 
-                using (StudentEntities1 db = new StudentEntities1())
+                using (SongEntities1 db = new SongEntities1())
                 {
                     var Status = (from s in db.StudentSubjects
                                   where s.StudentSubjectID == StudentSubjectID 
