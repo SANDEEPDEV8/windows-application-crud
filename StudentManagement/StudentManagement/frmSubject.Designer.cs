@@ -30,34 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DGVStudentSubject = new System.Windows.Forms.DataGridView();
-            this.getStudentSubjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentDataSet1 = new StudentManagement.SongDataSet();
             this.DGVSubject = new System.Windows.Forms.DataGridView();
             this.btnadd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.getStudentSubjectTableAdapter1 = new StudentManagement.SongDataSetTableAdapters.GetStudentSubjectTableAdapter();
             this.btnremove = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.subjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentDataSet11 = new StudentManagement.SongDataSet1();
             this.subjectsTableAdapter = new StudentManagement.SongDataSet1TableAdapters.SongTableAdapter();
+            this.getStudentSubjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentDataSet1 = new StudentManagement.SongDataSet();
+            this.getStudentSubjectTableAdapter1 = new StudentManagement.SongDataSetTableAdapters.GetStudentSubjectTableAdapter();
             this.subjectIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectCodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creditDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Artist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Likes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudentSubject)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getStudentSubjectBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSubject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getStudentSubjectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // DGVStudentSubject
@@ -69,9 +68,8 @@
             this.DGVStudentSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
-            this.subjectCodeDataGridViewTextBoxColumn,
-            this.subjectTypeDataGridViewTextBoxColumn,
-            this.creditDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
             this.DGVStudentSubject.DataSource = this.getStudentSubjectBindingSource;
             this.DGVStudentSubject.Location = new System.Drawing.Point(12, 102);
             this.DGVStudentSubject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -83,16 +81,6 @@
             this.DGVStudentSubject.Size = new System.Drawing.Size(697, 185);
             this.DGVStudentSubject.TabIndex = 0;
             // 
-            // getStudentSubjectBindingSource
-            // 
-            this.getStudentSubjectBindingSource.DataMember = "GetStudentSubject";
-            this.getStudentSubjectBindingSource.DataSource = this.studentDataSet1;
-            // 
-            // studentDataSet1
-            // 
-            this.studentDataSet1.DataSetName = "StudentDataSet";
-            this.studentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // DGVSubject
             // 
             this.DGVSubject.AllowUserToAddRows = false;
@@ -102,9 +90,9 @@
             this.DGVSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.subjectIDDataGridViewTextBoxColumn,
             this.Title,
-            this.subjectCodeDataGridViewTextBoxColumn1,
-            this.subjectTypeDataGridViewTextBoxColumn1,
-            this.creditDataGridViewTextBoxColumn1});
+            this.Artist,
+            this.Genre,
+            this.Likes});
             this.DGVSubject.DataSource = this.subjectsBindingSource;
             this.DGVSubject.Location = new System.Drawing.Point(13, 380);
             this.DGVSubject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -119,6 +107,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnadd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.Location = new System.Drawing.Point(521, 340);
             this.btnadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -126,7 +115,7 @@
             this.btnadd.Size = new System.Drawing.Size(177, 32);
             this.btnadd.TabIndex = 2;
             this.btnadd.Text = "Add Selected";
-            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.UseVisualStyleBackColor = false;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // label1
@@ -151,12 +140,9 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Available Subjects";
             // 
-            // getStudentSubjectTableAdapter1
-            // 
-            this.getStudentSubjectTableAdapter1.ClearBeforeFill = true;
-            // 
             // btnremove
             // 
+            this.btnremove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnremove.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnremove.Location = new System.Drawing.Point(491, 62);
             this.btnremove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -164,11 +150,12 @@
             this.btnremove.Size = new System.Drawing.Size(208, 32);
             this.btnremove.TabIndex = 6;
             this.btnremove.Text = "Remove Selected";
-            this.btnremove.UseVisualStyleBackColor = true;
+            this.btnremove.UseVisualStyleBackColor = false;
             this.btnremove.Click += new System.EventHandler(this.btnremove_Click_1);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(631, 15);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -176,7 +163,7 @@
             this.button1.Size = new System.Drawing.Size(88, 28);
             this.button1.TabIndex = 7;
             this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // subjectsBindingSource
@@ -192,6 +179,20 @@
             // subjectsTableAdapter
             // 
             this.subjectsTableAdapter.ClearBeforeFill = true;
+            // 
+            // getStudentSubjectBindingSource
+            // 
+            this.getStudentSubjectBindingSource.DataMember = "GetStudentSubject";
+            this.getStudentSubjectBindingSource.DataSource = this.studentDataSet1;
+            // 
+            // studentDataSet1
+            // 
+            this.studentDataSet1.DataSetName = "StudentDataSet";
+            this.studentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getStudentSubjectTableAdapter1
+            // 
+            this.getStudentSubjectTableAdapter1.ClearBeforeFill = true;
             // 
             // subjectIDDataGridViewTextBoxColumn
             // 
@@ -212,32 +213,32 @@
             this.Title.ReadOnly = true;
             this.Title.Width = 125;
             // 
-            // subjectCodeDataGridViewTextBoxColumn1
+            // Artist
             // 
-            this.subjectCodeDataGridViewTextBoxColumn1.DataPropertyName = "SubjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn1.HeaderText = "SubjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.subjectCodeDataGridViewTextBoxColumn1.Name = "subjectCodeDataGridViewTextBoxColumn1";
-            this.subjectCodeDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.subjectCodeDataGridViewTextBoxColumn1.Width = 125;
+            this.Artist.DataPropertyName = "Artist";
+            this.Artist.HeaderText = "Artist";
+            this.Artist.MinimumWidth = 6;
+            this.Artist.Name = "Artist";
+            this.Artist.ReadOnly = true;
+            this.Artist.Width = 125;
             // 
-            // subjectTypeDataGridViewTextBoxColumn1
+            // Genre
             // 
-            this.subjectTypeDataGridViewTextBoxColumn1.DataPropertyName = "SubjectType";
-            this.subjectTypeDataGridViewTextBoxColumn1.HeaderText = "SubjectType";
-            this.subjectTypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.subjectTypeDataGridViewTextBoxColumn1.Name = "subjectTypeDataGridViewTextBoxColumn1";
-            this.subjectTypeDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.subjectTypeDataGridViewTextBoxColumn1.Width = 125;
+            this.Genre.DataPropertyName = "Genre";
+            this.Genre.HeaderText = "Genre";
+            this.Genre.MinimumWidth = 6;
+            this.Genre.Name = "Genre";
+            this.Genre.ReadOnly = true;
+            this.Genre.Width = 125;
             // 
-            // creditDataGridViewTextBoxColumn1
+            // Likes
             // 
-            this.creditDataGridViewTextBoxColumn1.DataPropertyName = "Credit";
-            this.creditDataGridViewTextBoxColumn1.HeaderText = "Credit";
-            this.creditDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.creditDataGridViewTextBoxColumn1.Name = "creditDataGridViewTextBoxColumn1";
-            this.creditDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.creditDataGridViewTextBoxColumn1.Width = 125;
+            this.Likes.DataPropertyName = "Likes";
+            this.Likes.HeaderText = "Likes";
+            this.Likes.MinimumWidth = 6;
+            this.Likes.Name = "Likes";
+            this.Likes.ReadOnly = true;
+            this.Likes.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -251,45 +252,36 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Title";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Title";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Artist";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Artist";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
-            // subjectCodeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "SubjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "SubjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
-            this.subjectCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectCodeDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Likes";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Likes";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
-            // subjectTypeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.subjectTypeDataGridViewTextBoxColumn.DataPropertyName = "SubjectType";
-            this.subjectTypeDataGridViewTextBoxColumn.HeaderText = "SubjectType";
-            this.subjectTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.subjectTypeDataGridViewTextBoxColumn.Name = "subjectTypeDataGridViewTextBoxColumn";
-            this.subjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectTypeDataGridViewTextBoxColumn.Visible = false;
-            this.subjectTypeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // creditDataGridViewTextBoxColumn
-            // 
-            this.creditDataGridViewTextBoxColumn.DataPropertyName = "Credit";
-            this.creditDataGridViewTextBoxColumn.HeaderText = "Credit";
-            this.creditDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.creditDataGridViewTextBoxColumn.Name = "creditDataGridViewTextBoxColumn";
-            this.creditDataGridViewTextBoxColumn.ReadOnly = true;
-            this.creditDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Title";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Title";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // frmSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(735, 636);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnremove);
@@ -304,11 +296,11 @@
             this.Text = "Enrolled Subjects";
             this.Load += new System.EventHandler(this.frmSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudentSubject)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getStudentSubjectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSubject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getStudentSubjectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,15 +327,14 @@
         private System.Windows.Forms.Button btnremove;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectCodeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectTypeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creditDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creditDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Artist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Likes;
     }
 }

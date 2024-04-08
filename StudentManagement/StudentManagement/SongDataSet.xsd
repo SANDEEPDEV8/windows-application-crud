@@ -23,9 +23,12 @@
             <Mappings>
               <Mapping SourceColumn="Title" DataSetColumn="Title" />
               <Mapping SourceColumn="StudentSubjectID" DataSetColumn="StudentSubjectID" />
-              <Mapping SourceColumn="SubjectCode" DataSetColumn="SubjectCode" />
-              <Mapping SourceColumn="SubjectType" DataSetColumn="SubjectType" />
-              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="SubjectCode" DataSetColumn="Artist" />
+              <Mapping SourceColumn="SubjectType" DataSetColumn="Genre" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Likes" />
+              <Mapping SourceColumn="Artist" DataSetColumn="Artist" />
+              <Mapping SourceColumn="Genre" DataSetColumn="Genre" />
+              <Mapping SourceColumn="Likes" DataSetColumn="Likes" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -48,21 +51,21 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="StudentSubjectID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnStudentSubjectID" msprop:Generator_ColumnPropNameInRow="StudentSubjectID" msprop:Generator_ColumnPropNameInTable="StudentSubjectIDColumn" msprop:Generator_UserColumnName="StudentSubjectID" type="xs:int" />
-              <xs:element name="SubjectCode" msprop:Generator_ColumnVarNameInTable="columnSubjectCode" msprop:Generator_ColumnPropNameInRow="SubjectCode" msprop:Generator_ColumnPropNameInTable="SubjectCodeColumn" msprop:Generator_UserColumnName="SubjectCode">
+              <xs:element name="Artist" msprop:Generator_ColumnVarNameInTable="columnArtist" msprop:Generator_ColumnPropNameInRow="Artist" msprop:Generator_ColumnPropNameInTable="ArtistColumn" msprop:Generator_UserColumnName="Artist">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SubjectType" msprop:Generator_ColumnVarNameInTable="columnSubjectType" msprop:Generator_ColumnPropNameInRow="SubjectType" msprop:Generator_ColumnPropNameInTable="SubjectTypeColumn" msprop:Generator_UserColumnName="SubjectType">
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:int" />
+              <xs:element name="Likes" msprop:Generator_ColumnVarNameInTable="columnLikes" msprop:Generator_ColumnPropNameInRow="Likes" msprop:Generator_ColumnPropNameInTable="LikesColumn" msprop:Generator_UserColumnName="Likes" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

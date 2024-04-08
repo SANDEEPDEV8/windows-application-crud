@@ -48,5 +48,10 @@ namespace StudentManagement
         {
             this.Close();
         }
+
+        private void lblStudentID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
