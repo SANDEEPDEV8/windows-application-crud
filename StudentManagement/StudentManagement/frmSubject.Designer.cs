@@ -37,7 +37,7 @@
             this.studentDataSet1 = new StudentManagement.StudentDataSet();
             this.getStudentSubjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getStudentSubjectTableAdapter1 = new StudentManagement.StudentDataSetTableAdapters.GetStudentSubjectTableAdapter();
-            this.studentDataSet11 = new StudentManagement.StudentDataSet1();
+            this.studentDataSet11 = new StudentManagement.SongDataSet1();
             this.subjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.subjectsTableAdapter = new StudentManagement.StudentDataSet1TableAdapters.SongTableAdapter();
             this.subjectIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -301,7 +301,7 @@
         private StudentDataSet studentDataSet1;
         private System.Windows.Forms.BindingSource getStudentSubjectBindingSource;
         private StudentDataSetTableAdapters.GetStudentSubjectTableAdapter getStudentSubjectTableAdapter1;
-        private StudentDataSet1 studentDataSet11;
+        private SongDataSet1 studentDataSet11;
         private System.Windows.Forms.BindingSource subjectsBindingSource;
         private StudentDataSet1TableAdapters.SongTableAdapter subjectsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjectIDDataGridViewTextBoxColumn;

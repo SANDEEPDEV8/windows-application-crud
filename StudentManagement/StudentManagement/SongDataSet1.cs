@@ -2,7 +2,7 @@
 {
 
 
-    partial class StudentDataSet1
+    partial class SongDataSet1
     {
     }
 }
