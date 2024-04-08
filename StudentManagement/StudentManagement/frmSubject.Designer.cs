@@ -125,9 +125,9 @@
             this.label1.Location = new System.Drawing.Point(16, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 28);
+            this.label1.Size = new System.Drawing.Size(97, 28);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Enrolled Subjects";
+            this.label1.Text = "Playlist";
             // 
             // label2
             // 
@@ -136,9 +136,10 @@
             this.label2.Location = new System.Drawing.Point(12, 345);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 23);
+            this.label2.Size = new System.Drawing.Size(205, 23);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Available Subjects";
+            this.label2.Text = "Discover new music";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnremove
             // 
@@ -155,7 +156,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(631, 15);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
