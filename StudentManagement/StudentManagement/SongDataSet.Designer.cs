@@ -20,7 +20,7 @@ namespace StudentManagement {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("StudentDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SongDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class SongDataSet : global::System.Data.DataSet {
         
@@ -199,7 +199,7 @@ namespace StudentManagement {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "StudentDataSet";
+            this.DataSetName = "SongDataSet";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/StudentDataSet.xsd";
             this.EnforceConstraints = true;
@@ -279,7 +279,7 @@ namespace StudentManagement {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class GetStudentSubjectDataTable : global::System.Data.TypedTableBase<GetStudentSubjectRow> {
             
-            private global::System.Data.DataColumn columnSubjectName;
+            private global::System.Data.DataColumn columnTitle;
             
             private global::System.Data.DataColumn columnStudentSubjectID;
             
@@ -324,9 +324,9 @@ namespace StudentManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SubjectNameColumn {
+            public global::System.Data.DataColumn TitleColumn {
                 get {
-                    return this.columnSubjectName;
+                    return this.columnTitle;
                 }
             }
             
@@ -399,10 +399,10 @@ namespace StudentManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GetStudentSubjectRow AddGetStudentSubjectRow(string SubjectName, string SubjectCode, string SubjectType, int Credit) {
+            public GetStudentSubjectRow AddGetStudentSubjectRow(string Title, string SubjectCode, string SubjectType, int Credit) {
                 GetStudentSubjectRow rowGetStudentSubjectRow = ((GetStudentSubjectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        SubjectName,
+                        Title,
                         null,
                         SubjectCode,
                         SubjectType,
@@ -436,7 +436,7 @@ namespace StudentManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnSubjectName = base.Columns["SubjectName"];
+                this.columnTitle = base.Columns["Title"];
                 this.columnStudentSubjectID = base.Columns["StudentSubjectID"];
                 this.columnSubjectCode = base.Columns["SubjectCode"];
                 this.columnSubjectType = base.Columns["SubjectType"];
@@ -446,8 +446,8 @@ namespace StudentManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnSubjectName = new global::System.Data.DataColumn("SubjectName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSubjectName);
+                this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTitle);
                 this.columnStudentSubjectID = new global::System.Data.DataColumn("StudentSubjectID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStudentSubjectID);
                 this.columnSubjectCode = new global::System.Data.DataColumn("SubjectCode", typeof(string), null, global::System.Data.MappingType.Element);
@@ -458,8 +458,8 @@ namespace StudentManagement {
                 base.Columns.Add(this.columnCredit);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStudentSubjectID}, true));
-                this.columnSubjectName.AllowDBNull = false;
-                this.columnSubjectName.MaxLength = 100;
+                this.columnTitle.AllowDBNull = false;
+                this.columnTitle.MaxLength = 100;
                 this.columnStudentSubjectID.AutoIncrement = true;
                 this.columnStudentSubjectID.AllowDBNull = false;
                 this.columnStudentSubjectID.ReadOnly = true;
@@ -611,12 +611,12 @@ namespace StudentManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string SubjectName {
+            public string Title {
                 get {
-                    return ((string)(this[this.tableGetStudentSubject.SubjectNameColumn]));
+                    return ((string)(this[this.tableGetStudentSubject.TitleColumn]));
                 }
                 set {
-                    this[this.tableGetStudentSubject.SubjectNameColumn] = value;
+                    this[this.tableGetStudentSubject.TitleColumn] = value;
                 }
             }
             
@@ -700,7 +700,7 @@ namespace StudentManagement {
         }
     }
 }
-namespace StudentManagement.StudentDataSetTableAdapters {
+namespace StudentManagement.SongDataSetTableAdapters {
     
     
     /// <summary>
@@ -824,7 +824,7 @@ namespace StudentManagement.StudentDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "GetStudentSubject";
-            tableMapping.ColumnMappings.Add("SubjectName", "SubjectName");
+            tableMapping.ColumnMappings.Add("Title", "Title");
             tableMapping.ColumnMappings.Add("StudentSubjectID", "StudentSubjectID");
             tableMapping.ColumnMappings.Add("SubjectCode", "SubjectCode");
             tableMapping.ColumnMappings.Add("SubjectType", "SubjectType");

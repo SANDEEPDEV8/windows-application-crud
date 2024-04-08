@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="StudentDataSet" targetNamespace="http://tempuri.org/StudentDataSet.xsd" xmlns:mstns="http://tempuri.org/StudentDataSet.xsd" xmlns="http://tempuri.org/StudentDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="SongDataSet" targetNamespace="http://tempuri.org/StudentDataSet.xsd" xmlns:mstns="http://tempuri.org/StudentDataSet.xsd" xmlns="http://tempuri.org/StudentDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetStudentSubjectTableAdapter" GeneratorDataComponentClassName="GetStudentSubjectTableAdapter" Name="GetStudentSubject" UserDataComponentName="GetStudentSubjectTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="Student.dbo.GetStudentSubject" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="Student.dbo.GetStudentSubject" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetStudentSubject</CommandText>
@@ -21,7 +21,7 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="SubjectName" DataSetColumn="SubjectName" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
               <Mapping SourceColumn="StudentSubjectID" DataSetColumn="StudentSubjectID" />
               <Mapping SourceColumn="SubjectCode" DataSetColumn="SubjectCode" />
               <Mapping SourceColumn="SubjectType" DataSetColumn="SubjectType" />
@@ -34,13 +34,13 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="StudentDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StudentDataSet" msprop:Generator_UserDSName="StudentDataSet">
+  <xs:element name="SongDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SongDataSet" msprop:Generator_UserDSName="SongDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="GetStudentSubject" msprop:Generator_TableClassName="GetStudentSubjectDataTable" msprop:Generator_TableVarName="tableGetStudentSubject" msprop:Generator_TablePropName="GetStudentSubject" msprop:Generator_RowDeletingName="GetStudentSubjectRowDeleting" msprop:Generator_RowChangingName="GetStudentSubjectRowChanging" msprop:Generator_RowEvHandlerName="GetStudentSubjectRowChangeEventHandler" msprop:Generator_RowDeletedName="GetStudentSubjectRowDeleted" msprop:Generator_UserTableName="GetStudentSubject" msprop:Generator_RowChangedName="GetStudentSubjectRowChanged" msprop:Generator_RowEvArgName="GetStudentSubjectRowChangeEvent" msprop:Generator_RowClassName="GetStudentSubjectRow">
+        <xs:element name="GetStudentSubject" msprop:Generator_TableClassName="GetStudentSubjectDataTable" msprop:Generator_TableVarName="tableGetStudentSubject" msprop:Generator_RowChangedName="GetStudentSubjectRowChanged" msprop:Generator_TablePropName="GetStudentSubject" msprop:Generator_RowDeletingName="GetStudentSubjectRowDeleting" msprop:Generator_RowChangingName="GetStudentSubjectRowChanging" msprop:Generator_RowEvHandlerName="GetStudentSubjectRowChangeEventHandler" msprop:Generator_RowDeletedName="GetStudentSubjectRowDeleted" msprop:Generator_RowClassName="GetStudentSubjectRow" msprop:Generator_UserTableName="GetStudentSubject" msprop:Generator_RowEvArgName="GetStudentSubjectRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="SubjectName" msprop:Generator_ColumnVarNameInTable="columnSubjectName" msprop:Generator_ColumnPropNameInRow="SubjectName" msprop:Generator_ColumnPropNameInTable="SubjectNameColumn" msprop:Generator_UserColumnName="SubjectName">
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />

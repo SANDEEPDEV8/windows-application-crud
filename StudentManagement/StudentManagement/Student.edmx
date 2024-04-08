@@ -17,7 +17,7 @@
             <PropertyRef Name="SubjectID" />
           </Key>
           <Property Name="SubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SubjectName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="SubjectCode" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="SubjectType" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Credit" Type="int" Nullable="false" />
@@ -66,7 +66,7 @@
             <PropertyRef Name="SubjectID" />
           </Key>
           <Property Name="SubjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SubjectName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SubjectCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="SubjectType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Credit" Type="Int32" Nullable="false" />
@@ -101,7 +101,7 @@
                 <ScalarProperty Name="Credit" ColumnName="Credit" />
                 <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
                 <ScalarProperty Name="SubjectCode" ColumnName="SubjectCode" />
-                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
               </MappingFragment>
             </EntityTypeMapping>

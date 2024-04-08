@@ -73,5 +73,10 @@ namespace StudentManagement
             this.Close();
             
         }
+
+        private void DGVSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

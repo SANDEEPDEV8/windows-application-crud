@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="StudentDataSet1" targetNamespace="http://tempuri.org/StudentDataSet1.xsd" xmlns:mstns="http://tempuri.org/StudentDataSet1.xsd" xmlns="http://tempuri.org/StudentDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="SongDataSet1" targetNamespace="http://tempuri.org/StudentDataSet1.xsd" xmlns:mstns="http://tempuri.org/StudentDataSet1.xsd" xmlns="http://tempuri.org/StudentDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SongTableAdapter" GeneratorDataComponentClassName="SongTableAdapter" Name="Song" UserDataComponentName="SongTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="Student.dbo.Song" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT SubjectID, SubjectName, SubjectCode, SubjectType, Credit FROM dbo.Song</CommandText>
+                    <CommandText>SELECT SubjectID, Title, SubjectCode, SubjectType, Credit FROM dbo.Song</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -20,7 +20,7 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="SubjectID" DataSetColumn="SubjectID" />
-              <Mapping SourceColumn="SubjectName" DataSetColumn="SubjectName" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
               <Mapping SourceColumn="SubjectCode" DataSetColumn="SubjectCode" />
               <Mapping SourceColumn="SubjectType" DataSetColumn="SubjectType" />
               <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
@@ -32,14 +32,14 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="StudentDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StudentDataSet1" msprop:Generator_UserDSName="StudentDataSet1">
+  <xs:element name="SongDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SongDataSet1" msprop:Generator_UserDSName="SongDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Song" msprop:Generator_TableClassName="SongDataTable" msprop:Generator_TableVarName="tableSong" msprop:Generator_RowChangedName="SongRowChanged" msprop:Generator_TablePropName="Song" msprop:Generator_RowDeletingName="SongRowDeleting" msprop:Generator_RowChangingName="SongRowChanging" msprop:Generator_RowEvHandlerName="SongRowChangeEventHandler" msprop:Generator_RowDeletedName="SongRowDeleted" msprop:Generator_RowClassName="SongRow" msprop:Generator_UserTableName="Song" msprop:Generator_RowEvArgName="SongRowChangeEvent">
+        <xs:element name="Song" msprop:Generator_TableClassName="SongDataTable" msprop:Generator_TableVarName="tableSong" msprop:Generator_TablePropName="Song" msprop:Generator_RowDeletingName="SongRowDeleting" msprop:Generator_RowChangingName="SongRowChanging" msprop:Generator_RowEvHandlerName="SongRowChangeEventHandler" msprop:Generator_RowDeletedName="SongRowDeleted" msprop:Generator_UserTableName="Song" msprop:Generator_RowChangedName="SongRowChanged" msprop:Generator_RowEvArgName="SongRowChangeEvent" msprop:Generator_RowClassName="SongRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SubjectID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSubjectID" msprop:Generator_ColumnPropNameInRow="SubjectID" msprop:Generator_ColumnPropNameInTable="SubjectIDColumn" msprop:Generator_UserColumnName="SubjectID" type="xs:int" />
-              <xs:element name="SubjectName" msprop:Generator_ColumnVarNameInTable="columnSubjectName" msprop:Generator_ColumnPropNameInRow="SubjectName" msprop:Generator_ColumnPropNameInTable="SubjectNameColumn" msprop:Generator_UserColumnName="SubjectName">
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
