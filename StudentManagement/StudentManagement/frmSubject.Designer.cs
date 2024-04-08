@@ -34,7 +34,7 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.studentDataSet1 = new StudentManagement.StudentDataSet();
+            this.studentDataSet1 = new StudentManagement.SongDataSet();
             this.getStudentSubjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getStudentSubjectTableAdapter1 = new StudentManagement.StudentDataSetTableAdapters.GetStudentSubjectTableAdapter();
             this.studentDataSet11 = new StudentManagement.SongDataSet1();
@@ -294,11 +294,11 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private StudentDataSet studentDataSet;
+        private SongDataSet studentDataSet;
         private StudentDataSetTableAdapters.GetStudentSubjectTableAdapter getStudentSubjectTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjectNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentSubjectIDDataGridViewTextBoxColumn;
-        private StudentDataSet studentDataSet1;
+        private SongDataSet studentDataSet1;
         private System.Windows.Forms.BindingSource getStudentSubjectBindingSource;
         private StudentDataSetTableAdapters.GetStudentSubjectTableAdapter getStudentSubjectTableAdapter1;
         private SongDataSet1 studentDataSet11;

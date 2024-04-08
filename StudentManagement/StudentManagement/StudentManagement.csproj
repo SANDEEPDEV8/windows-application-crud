@@ -92,10 +92,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Student.edmx</DependentUpon>
     </Compile>
-    <Compile Include="StudentDataSet.Designer.cs">
+    <Compile Include="SongDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+      <DependentUpon>SongDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SongDataSet1.cs">
       <DependentUpon>SongDataSet1.xsd</DependentUpon>
@@ -143,16 +143,16 @@
     <None Include="Student.edmx.diagram">
       <DependentUpon>Student.edmx</DependentUpon>
     </None>
-    <None Include="StudentDataSet.xsc">
-      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    <None Include="SongDataSet.xsc">
+      <DependentUpon>SongDataSet.xsd</DependentUpon>
     </None>
-    <None Include="StudentDataSet.xsd">
+    <None Include="SongDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StudentDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>SongDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="StudentDataSet.xss">
-      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    <None Include="SongDataSet.xss">
+      <DependentUpon>SongDataSet.xsd</DependentUpon>
     </None>
     <None Include="SongDataSet1.xsc">
       <DependentUpon>SongDataSet1.xsd</DependentUpon>
