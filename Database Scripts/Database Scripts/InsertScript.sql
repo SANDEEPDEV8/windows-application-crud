@@ -1,0 +1,12 @@
+insert into dbo.Login values('admin','admin')
+insert into dbo.subjects values('Advance programming C#','CS5001','Computer Science',3)
+insert into dbo.subjects values('Complier Design','CS5002','Computer Science',3)
+insert into dbo.subjects values('Advance programming java','CS5003','Computer Science',3)
+insert into dbo.subjects values('Ethical Hacking','Cy5005','Cyber Security',3)
+insert into dbo.subjects values('Advance Operating System','CS5004','Computer Science',3)
+insert into dbo.subjects values('Software Enginnering','SE5004','Software Engineering',3)
+
+insert into dbo.StudentSubject values(1,'admin')
+insert into dbo.StudentSubject values(2,'admin')
+insert into dbo.StudentSubject values(4,'admin')
+insert into dbo.StudentSubject values(5,'admin')
