@@ -12,15 +12,7 @@
           <Property Name="StudentID" Type="char" MaxLength="8" Nullable="false" />
           <Property Name="Password" Type="char" MaxLength="8" Nullable="false" />
         </EntityType>
-        <EntityType Name="StudentSubject">
-          <Key>
-            <PropertyRef Name="StudentSubjectID" />
-          </Key>
-          <Property Name="StudentSubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SubjectID" Type="int" Nullable="false" />
-          <Property Name="StudentID" Type="char" MaxLength="8" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Subjects">
+        <EntityType Name="Song">
           <Key>
             <PropertyRef Name="SubjectID" />
           </Key>
@@ -30,10 +22,19 @@
           <Property Name="SubjectType" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Credit" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="StudentSubject">
+          <Key>
+            <PropertyRef Name="StudentSubjectID" />
+          </Key>
+          <Property Name="StudentSubjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubjectID" Type="int" Nullable="false" />
+          <Property Name="StudentID" Type="char" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <Function Name="GetStudentSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="StudentModelStoreContainer">
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Song" EntityType="Self.Song" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudentSubject" EntityType="Self.StudentSubject" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -49,7 +50,8 @@
         <EntityContainer Name="SongEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Logins" EntityType="Self.Login" />
           <EntitySet Name="StudentSubjects" EntityType="StudentModel.StudentSubject" />
-          <EntitySet Name="Subjects" EntityType="StudentModel.Subject" />
+          <FunctionImport Name="GetStudentSubject" />
+          <EntitySet Name="Songs" EntityType="StudentModel.Song" />
         </EntityContainer>
         <EntityType Name="StudentSubject">
           <Key>
@@ -59,12 +61,12 @@
           <Property Name="SubjectID" Type="Int32" Nullable="false" />
           <Property Name="StudentID" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
         </EntityType>
-        <EntityType Name="Subject">
+        <EntityType Name="Song">
           <Key>
             <PropertyRef Name="SubjectID" />
           </Key>
           <Property Name="SubjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SubjectName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SubjectCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="SubjectType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Credit" Type="Int32" Nullable="false" />
@@ -92,13 +94,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Subjects">
-            <EntityTypeMapping TypeName="StudentModel.Subject">
-              <MappingFragment StoreEntitySet="Subjects">
+          <FunctionImportMapping FunctionImportName="GetStudentSubject" FunctionName="StudentModel.Store.GetStudentSubject" />
+          <EntitySetMapping Name="Songs">
+            <EntityTypeMapping TypeName="StudentModel.Song">
+              <MappingFragment StoreEntitySet="Song">
                 <ScalarProperty Name="Credit" ColumnName="Credit" />
                 <ScalarProperty Name="SubjectType" ColumnName="SubjectType" />
                 <ScalarProperty Name="SubjectCode" ColumnName="SubjectCode" />
-                <ScalarProperty Name="Title" ColumnName="SubjectName" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
                 <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
               </MappingFragment>
             </EntityTypeMapping>

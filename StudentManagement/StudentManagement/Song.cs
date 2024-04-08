@@ -12,10 +12,10 @@ namespace StudentManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class Subject
+    public partial class Song
     {
         public int SubjectID { get; set; }
-        public string Title { get; set; }
+        public string SubjectName { get; set; }
         public string SubjectCode { get; set; }
         public string SubjectType { get; set; }
         public int Credit { get; set; }

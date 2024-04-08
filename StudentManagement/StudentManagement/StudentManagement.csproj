@@ -74,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Song.cs">
+      <DependentUpon>Student.tt</DependentUpon>
+    </Compile>
     <Compile Include="Student.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,15 +97,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StudentDataSet1.cs">
+      <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="StudentSubject.cs">
-      <DependentUpon>Student.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Subject.cs">
       <DependentUpon>Student.tt</DependentUpon>
     </Compile>
     <Compile Include="SubjectDTO.cs" />

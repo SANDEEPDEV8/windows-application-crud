@@ -40,7 +40,7 @@ namespace StudentManagement
         private void frmSubject_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'studentDataSet11.Subjects' table. You can move, or remove it, as needed.
-            this.subjectsTableAdapter.Fill(this.studentDataSet11.Subjects);
+            this.subjectsTableAdapter.Fill(this.studentDataSet11.Song);
             // TODO: This line of code loads data into the 'studentDataSet1.GetStudentSubject' table. You can move, or remove it, as needed.
             this.getStudentSubjectTableAdapter1.Fill(this.studentDataSet1.GetStudentSubject);
        

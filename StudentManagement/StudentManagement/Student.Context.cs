@@ -12,6 +12,8 @@ namespace StudentManagement
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SongEntities1 : DbContext
     {
@@ -27,6 +29,11 @@ namespace StudentManagement
     
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<StudentSubject> StudentSubjects { get; set; }
-        public virtual DbSet<Subject> Subjects { get; set; }
+        public virtual DbSet<Song> Songs { get; set; }
+    
+        public virtual int GetStudentSubject()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GetStudentSubject");
+        }
     }
 }
